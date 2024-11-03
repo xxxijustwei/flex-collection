@@ -1,6 +1,6 @@
 # flex-collection
 
-A pure CSS responsive image gallery showcasing the power of modern CSS Grid and Flexbox, built with Next.js 14 and Tailwind CSS - no JavaScript layout calculations needed.
+A pure CSS responsive image gallery showcasing the power of modern CSS Flexbox, built with Next.js 14 and Tailwind CSS - no JavaScript layout calculations needed.
 
 🔗 [Live Demo](https://flex-collection.vercel.app/)
 
