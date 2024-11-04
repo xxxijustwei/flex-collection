@@ -7,7 +7,7 @@ const Page = () => {
                 <div className="w-full flex flex-wrap gap-x-4 p-4">
                     {
                         Array.from({ length: 14 }).map((_, index) => (
-                            <div key={index} className="flex-grow aspect-[1/1.4] mt-4 rounded-lg overflow-hidden sm:basis-[calc(50%-16px)] md:basis-[calc(33.33%-16px)] lg:basis-[calc(25%-16px)] xl:basis-[calc(20%-16px)]">
+                            <div key={index} className="flex-grow aspect-[1/1.4] mt-4 rounded-lg overflow-hidden basis-full sm:basis-[calc(50%-16px)] md:basis-[calc(33.33%-16px)] lg:basis-[calc(25%-16px)] xl:basis-[calc(20%-16px)]">
                                 <div className="w-full h-full">
                                     <img
                                         src={`https://www.miladymaker.net/milady/${index + 1}.png`}
@@ -22,7 +22,7 @@ const Page = () => {
                         Array.from({ length: 4 }).map((_, index) => (
                             <div
                                 key={index}
-                                className="sm:basis-[calc(50%-16px)] md:basis-[calc(33.33%-16px)] lg:basis-[calc(25%-16px)] xl:basis-[calc(20%-16px)]"
+                                className="flex-grow basis-full sm:basis-[calc(50%-16px)] md:basis-[calc(33.33%-16px)] lg:basis-[calc(25%-16px)] xl:basis-[calc(20%-16px)]"
                             />
                         ))
                     }
