@@ -4,9 +4,6 @@ import { fontFamily } from "tailwindcss/defaultTheme";
 const config = {
     darkMode: ["class"],
     content: [
-        './pages/**/*.{ts,tsx}',
-        './components/**/*.{ts,tsx}',
-        './app/**/*.{ts,tsx}',
         './src/**/*.{ts,tsx}',
     ],
     prefix: "",
@@ -20,16 +17,12 @@ const config = {
     		'3xl': '1700px',
     		'4xl': '1920px'
     	},
-    	container: {
-    		center: true,
-    		padding: '2rem',
-    		screens: {
-    			'2xl': '1400px'
-    		}
-    	},
     	extend: {
     		fontFamily: {
-    			sans: ["var(--font-inter)", ...fontFamily.sans]
+    			sans: [
+    				'var(--font-inter)',
+                    ...fontFamily.sans
+                ]
     		},
     		colors: {
     			border: 'hsl(var(--border))',
@@ -66,7 +59,14 @@ const config = {
     				foreground: 'hsl(var(--card-foreground))'
     			},
     			tp: 'hsl(var(--tp))',
-    			ts: 'hsl(var(--ts))'
+    			ts: 'hsl(var(--ts))',
+    			chart: {
+    				'1': 'hsl(var(--chart-1))',
+    				'2': 'hsl(var(--chart-2))',
+    				'3': 'hsl(var(--chart-3))',
+    				'4': 'hsl(var(--chart-4))',
+    				'5': 'hsl(var(--chart-5))'
+    			}
     		},
     		borderRadius: {
     			lg: 'var(--radius)',
@@ -90,15 +90,27 @@ const config = {
     					height: '0'
     				}
     			},
+    			shine: {
+    				'0%': {
+    					'background-position': '0% 0%'
+    				},
+    				'50%': {
+    					'background-position': '100% 100%'
+    				},
+    				to: {
+    					'background-position': '0% 0%'
+    				}
+    			}
     		},
     		animation: {
     			'accordion-down': 'accordion-down 0.2s ease-out',
     			'accordion-up': 'accordion-up 0.2s ease-out',
+    			shine: 'shine var(--duration) infinite linear'
     		}
     	}
     },
     plugins: [
-        require("tailwindcss-animate"),
+        require("tailwindcss-animate")
     ],
 } satisfies Config
 

@@ -2,28 +2,22 @@
 
 const Page = () => {
     return (
-        <div className="w-full min-h-svh flex items-center justify-center">
-            <div className="w-full min-h-svh max-w-[1240px] mx-8">
-                <div className="w-full flex flex-wrap gap-x-4 p-4">
+        <div className="w-full h-full flex items-center justify-center">
+            <div className="w-full h-full max-w-[1240px] mx-8">
+                <div className="gap-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 w-full">
                     {
                         Array.from({ length: 14 }).map((_, index) => (
-                            <div key={index} className="flex-grow aspect-[1/1.4] mt-4 rounded-lg overflow-hidden basis-full sm:basis-[calc(50%-16px)] md:basis-[calc(33.33%-16px)] lg:basis-[calc(25%-16px)] xl:basis-[calc(20%-16px)]">
-                                <div className="w-full h-full">
-                                    <img
-                                        src={`https://www.miladymaker.net/milady/${index + 1}.png`}
-                                        alt="image"
-                                        className="w-full h-full object-cover"
-                                    />
-                                </div>
-                            </div>
-                        ))
-                    }
-                    {
-                        Array.from({ length: 4 }).map((_, index) => (
                             <div
                                 key={index}
-                                className="flex-grow basis-full sm:basis-[calc(50%-16px)] md:basis-[calc(33.33%-16px)] lg:basis-[calc(25%-16px)] xl:basis-[calc(20%-16px)]"
-                            />
+                                className="relative rounded-lg aspect-[4/5] overflow-hidden"
+                            >
+                                <img
+                                    src={`https://www.miladymaker.net/milady/${index + 1}.png`}
+                                    alt="image"
+                                    loading="lazy"
+                                    className="w-full h-full object-cover object-center"
+                                />
+                            </div>
                         ))
                     }
                 </div>
